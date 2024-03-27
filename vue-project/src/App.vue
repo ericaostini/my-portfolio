@@ -1,13 +1,14 @@
 <template>
-  <div class="text-danger">
-    ciao
-    <i class="fa-solid fa-user"></i>
-  </div>
+  <Homepage />
 </template>
 
 <script>
+import Homepage from './pages/Homepage.vue';
 export default {
-
+  name: 'App',
+  components: {
+    Homepage
+  }
 }
 </script>
 
