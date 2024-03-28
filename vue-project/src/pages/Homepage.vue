@@ -1,4 +1,5 @@
 <template>
+   <NavbarComponent />
    <div class="text-light intro">
       <div class="img-container">
          <img src="../../img/profile.png" alt="Erica-Ostini-image">
@@ -19,7 +20,12 @@
 </template>
 
 <script>
+import NavbarComponent from '../components/NavbarComponent.vue';
 export default {
+   name: 'Homepage',
+   components: {
+      NavbarComponent
+   }
 
 }
 </script>
