@@ -17,10 +17,33 @@
       </p> -->
 
       <div class="text-light">
-         <div v-for="skill in  store.skills " :key="skill.id">
-            <p>{{ skill.name }}</p>
-            <div class="img-container">
-               <img :src="'../../img/skills/' + skill.img" alt="img">
+         <div class="row justify-content-between">
+            <div v-for="skill in  store.skills " :key="skill.id" class="col-lg-2">
+               <div class="col-lg-4" v-if='skill.front_end'>
+                  <p>{{ skill.name }}</p>
+                  <div class="img-container">
+                     <img :src="'../../img/skills/' + skill.img" alt="img">
+                  </div>
+               </div>
+               <div class="col-lg-6" v-if='skill.back_end'>
+                  <p>{{ skill.name }}</p>
+                  <div class="img-container">
+                     <img :src="'../../img/skills/' + skill.img" alt="img">
+                  </div>
+               </div>
+               <div class="col-lg-6" v-if='skill.support'>
+                  <p>{{ skill.name }}</p>
+                  <div class="img-container">
+                     <img :src="'../../img/skills/' + skill.img" alt="img">
+                  </div>
+               </div>
+               <div class="col-lg-6" v-if='skill.inprogress'>
+                  <p>{{ skill.name }}</p>
+                  <div class="img-container">
+                     <img :src="'../../img/skills/' + skill.img" alt="img">
+                  </div>
+                  <p>In progress</p>
+               </div>
             </div>
          </div>
       </div>
